@@ -1,10 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Page 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+font-family: Arial, sans-serif;
+background: #fff;
+margin: 0;
+padding: 0;
+width: 375px; /* Fixed width for phone screen simulation */
+margin: 0 auto; /* Center the content horizontally */
+}
+.menu-bar {
+background-color: #000;
+color: #fff;
+overflow: hidden;
+padding: 10px 0;
+}
+.menu-bar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+.menu-bar a:hover {
+background-color: #ddd;
+color: black;
+}
+.recipe-list {
+padding: 20px;
+}
+.recipe {
+margin-bottom: 10px;
+border: 1px solid #ddd;
+padding: 10px;
+}
+.rating {
+color: gold;
+}
+.time,
+.difficulty {
+color: grey;
+}
+.tag {
+background-color: lightgreen;
+color: darkgreen;
+padding: 3px 6px;
+margin-right: 5px;
+border-radius: 5px;
+font-size: 0.8em;
+}
+.recipe img {
+max-width: 100%;
+height: auto;
+display: block;
+margin-bottom: 10px;
+}
+</style>
 </head>
 <body>
-    <h1>Welcome to Page 1</h1>
-    <p>Click <a href="page2.html">here</a> to visit Page 2.</p>
+<div class="menu-bar">
+<a href="#recipes">Recipes</a>
+<a href="#order">Order Online</a>
+<a href="#search">Search for a Restaurant</a>
+<a href="#account">Your Account</a>
+</div>
+<div class="recipe-list">
+<!-- Existing recipes -->
+<!-- ... -->
+
+<!-- New dummy recipes -->
+<div class="recipe">
+<img src="placeholder-image-link.jpg" alt="Stuffed Bell Peppers">
+<h3><a href="#stuffed-bell-peppers">Stuffed Bell Peppers</a></h3>
+<p>Colorful bell peppers stuffed with rice, beans, and cheese, baked to perfection.</p>
+<span class="rating">Rating: 9/10</span> |
+<span class="time">Time: 45 min</span> |
+<span class="difficulty">Difficulty: Moderate</span>
+<span class="tag">Healthy</span>
+</div>
+<div class="recipe">
+<img src="placeholder-image-link.jpg" alt="Mushroom Risotto">
+<h3><a href="#mushroom-risotto">Mushroom Risotto</a></h3>
+<p>Creamy risotto with sautéed mushrooms and a sprinkle of Parmesan cheese.</p>
+<span class="rating">Rating: 8/10</span> |
+<span class="time">Time: 30 min</span> |
+<span class="difficulty">Difficulty: Challenging</span>
+<span class="tag">Vegan</span>
+</div>
+<div class="recipe">
+<img src="placeholder-image-link.jpg" alt="Pumpkin Soup">
+<h3><a href="#pumpkin-soup">Pumpkin Soup</a></h3>
+<p>A warm and comforting soup made with fresh pumpkin and a hint of nutmeg.</p>
+<span class="rating">Rating: 7/10</span> |
+<span class="time">Time: 25 min</span> |
+<span class="difficulty">Difficulty: Simple</span>
+<!-- No tag for this recipe -->
+</div>
+</div>
 </body>
 </html>
