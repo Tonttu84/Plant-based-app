@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Add your existing styles here */
+/* ... */
+.food-types {
+display: flex;
+overflow-x: auto;
+white-space: nowrap;
+padding: 10px 0;
+}
+.food-types div {
+display: inline-block;
+margin-right: 10px;
+padding: 10px;
+background: #f1f1f1;
+border-radius: 5px;
+}
+.restaurant-list {
+padding: 20px;
+}
+.restaurant {
+margin-bottom: 10px;
+border: 1px solid #ddd;
+padding: 10px;
+}
+.restaurant img {
+max-width: 100%;
+height: auto;
+display: block;
+margin-bottom: 10px;
+}
+.rating, .price-range {
+margin-bottom: 5px;
+}
+/* Additional styles for scrolling on mobile */
+@media (max-width: 768px) {
+.food-types div {
+width: 90%;
+}
+}
+</style>
+</head>
+<body>
+<div class="menu-bar">
+<!-- Your existing menu items -->
+<!-- ... -->
+</div>
+<div class="food-types">
+<div>Italian</div>
+<div>Sushi</div>
+<div>Burgers</div>
+<div>Indian</div>
+<!-- Add more food types as needed -->
+</div>
+<div class="restaurant-list">
+<!-- Dummy restaurant for Italian -->
+<div class="restaurant">
+<img src="placeholder-image-link.jpg" alt="Italian Food">
+<h3>La Bella Pasta</h3>
+<div class="rating">Rating: 8/10</div>
+<div class="price-range">Price: €€€</div>
+<!-- Add description or other details if needed -->
+</div>
+<!-- Repeat for other food types and restaurants -->
+<!-- ... -->
+</div>
+</body>
+</html>
