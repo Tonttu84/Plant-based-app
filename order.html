@@ -4,8 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Add your existing styles here */
-/* ... */
+body {
+font-family: Arial, sans-serif;
+background: #fff;
+margin: 0;
+padding: 0;
+width: 375px; /* Fixed width for phone screen simulation */
+margin: 0 auto; /* Center the content horizontally */
+}
+.menu-bar {
+background-color: #000;
+color: #fff;
+overflow: hidden;
+padding: 10px 0;
+}
+.menu-bar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+.menu-bar a:hover {
+background-color: #ddd;
+color: black;
+}
 .food-types {
 display: flex;
 overflow-x: auto;
@@ -36,18 +60,14 @@ margin-bottom: 10px;
 .rating, .price-range {
 margin-bottom: 5px;
 }
-/* Additional styles for scrolling on mobile */
-@media (max-width: 768px) {
-.food-types div {
-width: 90%;
-}
-}
 </style>
 </head>
 <body>
 <div class="menu-bar">
-<!-- Your existing menu items -->
-<!-- ... -->
+<a href="recipes.html">Recipes</a>
+<a href="order.html">Order Online</a>
+<a href="search.html">Search for a Restaurant</a>
+<a href="account.html">Your Account</a>
 </div>
 <div class="food-types">
 <div>Italian</div>
@@ -59,7 +79,7 @@ width: 90%;
 <div class="restaurant-list">
 <!-- Dummy restaurant for Italian -->
 <div class="restaurant">
-<img src="placeholder-image-link.jpg" alt="Italian Food">
+<img src="italian-food.jpg" alt="Italian Food">
 <h3>La Bella Pasta</h3>
 <div class="rating">Rating: 8/10</div>
 <div class="price-range">Price: €€€</div>
