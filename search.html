@@ -1,0 +1,28 @@
+To create a search.html page that embeds Google Maps focused on restaurants in Berlin within an app-sized window, you can use an iframe with the Google Maps Embed API. Here's an example of how you can structure your HTML file:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Your existing styles */
+/* ... */
+</style>
+</head>
+<body>
+<div class="menu-bar">
+<!-- Your existing menu items -->
+<!-- ... -->
+</div>
+<div class="map-container">
+<iframe
+width="375" /* Match the app width */
+height="667" /* Adjust height as needed */
+frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/search?key=YOUR_API_KEY&q=restaurants+in+Berlin"
+allowfullscreen>
+</iframe>
+</div>
+</body>
+</html>
