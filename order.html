@@ -36,12 +36,16 @@ overflow-x: auto;
 white-space: nowrap;
 padding: 10px 0;
 }
-.food-types div {
+.food-type {
 display: inline-block;
 margin-right: 10px;
-padding: 10px;
-background: #f1f1f1;
-border-radius: 5px;
+text-align: center;
+width: calc(100% / 3); /* 3 items per screen */
+}
+.food-type img {
+width: 100%;
+height: auto;
+max-height: calc(2.5 * 1em); /* 2.5 times the height of the text */
 }
 .restaurant-list {
 padding: 20px;
@@ -70,16 +74,28 @@ margin-bottom: 5px;
 <a href="account.html">Your Account</a>
 </div>
 <div class="food-types">
+<div class="food-type">
+<img src="italian-placeholder.jpg" alt="Italian">
 <div>Italian</div>
+</div>
+<div class="food-type">
+<img src="sushi-placeholder.jpg" alt="Sushi">
 <div>Sushi</div>
+</div>
+<div class="food-type">
+<img src="burgers-placeholder.jpg" alt="Burgers">
 <div>Burgers</div>
+</div>
+<div class="food-type">
+<img src="indian-placeholder.jpg" alt="Indian">
 <div>Indian</div>
+</div>
 <!-- Add more food types as needed -->
 </div>
 <div class="restaurant-list">
 <!-- Dummy restaurant for Italian -->
 <div class="restaurant">
-<img src="italian-food.jpg" alt="Italian Food">
+<img src="italian-restaurant.jpg" alt="Italian Restaurant">
 <h3>La Bella Pasta</h3>
 <div class="rating">Rating: 8/10</div>
 <div class="price-range">Price: €€€</div>
