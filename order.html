@@ -41,11 +41,16 @@ display: inline-block;
 margin-right: 10px;
 text-align: center;
 width: calc(100% / 3); /* 3 items per screen */
+cursor: pointer; /* Indicates the item is clickable */
 }
 .food-type img {
 width: 100%;
 height: auto;
 max-height: calc(2.5 * 1em); /* 2.5 times the height of the text */
+}
+.selected {
+background-color: #4CAF50; /* Highlight selected food type */
+color: white;
 }
 .restaurant-list {
 padding: 20px;
@@ -65,6 +70,41 @@ margin-bottom: 10px;
 margin-bottom: 5px;
 }
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+var foodTypes = document.querySelectorAll('.food-type');
+var restaurants = document.querySelectorAll('.restaurant');
+
+// Initially display all restaurants
+restaurants.forEach(function(restaurant) {
+restaurant.style.display = '';
+});
+
+foodTypes.forEach(function(foodType) {
+foodType.addEventListener('click', function() {
+// Toggle selected class
+foodType.classList.toggle('selected');
+// Filter restaurants based on selection
+var selectedTypes = document.querySelectorAll('.food-type.selected');
+if (selectedTypes.length === 0) {
+// If no types are selected, show all restaurants
+restaurants.forEach(function(restaurant) {
+restaurant.style.display = '';
+});
+} else {
+// Otherwise, show only restaurants with matching tags
+restaurants.forEach(function(restaurant) {
+var tag = restaurant.getAttribute('data-tag');
+var isSelected = Array.from(selectedTypes).some(function(selectedType) {
+return selectedType.textContent.trim() === tag;
+});
+restaurant.style.display = isSelected ? '' : 'none';
+});
+}
+});
+});
+});
+</script>
 </head>
 <body>
 <div class="menu-bar">
@@ -90,19 +130,33 @@ margin-bottom: 5px;
 <img src="indian-placeholder.jpg" alt="Indian">
 <div>Indian</div>
 </div>
-<!-- Add more food types as needed -->
 </div>
 <div class="restaurant-list">
-<!-- Dummy restaurant for Italian -->
-<div class="restaurant">
+<div class="restaurant" data-tag="Italian">
 <img src="italian-restaurant.jpg" alt="Italian Restaurant">
 <h3>La Bella Pasta</h3>
 <div class="rating">Rating: 8/10</div>
 <div class="price-range">Price: €€€</div>
-<!-- Add description or other details if needed -->
 </div>
-<!-- Repeat for other food types and restaurants -->
-<!-- ... -->
+<div class="restaurant" data-tag="Sushi">
+<img src="sushi-restaurant.jpg" alt="Sushi Restaurant">
+<h3>Sushi Maki</h3>
+<div class="rating">Rating: 7/10</div>
+<div class="price-range">Price: €€</div>
+</div>
+<div class="restaurant" data-tag="Burgers">
+<img src="burger-restaurant.jpg" alt="Burger Restaurant">
+<h3>Burger Hub</h3>
+<div class="rating">Rating: 9/10</div>
+<div class="price-range">Price: €€</div>
+</div>
+<div class="restaurant" data-tag="Indian">
+<img src="indian-restaurant.jpg" alt="Indian Restaurant">
+<h3>Curry Palace</h3>
+<div class="rating">Rating: 8/10</div>
+<div class="price-range">Price: €€€</div>
+</div>
+<!-- Add more restaurants with different data-tag attributes as needed -->
 </div>
 </body>
 </html>
